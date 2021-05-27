@@ -3,7 +3,7 @@
   --purple: #282a36;
   --white: #ffff;
   --green: #38d430;
-  --yellow: #f7df1e;
+  --orange: #ffb74d;
 }
 * {
   margin: 0;
@@ -106,7 +106,7 @@ header {
 }
 .details .item span {
   padding: 8px 16px;
-  background-color: var(--yellow);
+  background-color: var(--orange);
   border-radius: 16px;
   color: #777;
   margin-right: 4px;
@@ -126,5 +126,17 @@ input[type="radio"] {
 }
 input::placeholder{
   font-size: 16px;
+  
+}
+button[type="submit"]{
+  padding: 18px 0;
+  background-color:var(--purple) ;
+  border-radius: 4px;
+  margin-top: 32px;
+  width: 100%;
+  color: var(--white);
+  font-size: 16px;
+  outline: none;
+
   
 }
