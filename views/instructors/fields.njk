@@ -1,29 +1,29 @@
-     <div class="item">
-            <div>Avatar URL</div>
-            <input type="url" name="avatar_url"placeholder="http://">
-        </div>
-        <div class="item">
-            <div>Instutor</div>
-            <input type="text" name="name"placeholder="Nome do instrutor">
-        </div>
+<div class="item">
+    <div>Avatar URL</div>
+    <input type="url" name="avatar_url" placeholder="http://" value="{{ instructor.avatar_url }}"></div>
+    <div class="item">
+        <div>Instutor</div>
+        <input type="text" name="name" placeholder="Nome do instrutor" value="{{ instructor.name }}"></div>
         <div class="item">
             <div>Data de nascimento</div>
-            <input type="date" name="birth">
-        </div>
-        <div class="item">
-            <div>Sexo</div>
-            <span> <input type="radio" name="gender" value="M" checked>Masculino</span>
-            <span> <input type="radio" name="gender" value="F">Feminino</span>
-        </div>
-         <div class="item">
-            <div>Tipo de Aula</div>
-            <span> <input type="radio" name="type_class" value="P" checked>Presencial </span>
-            <span> <input type="radio" name="type_class" value="D"> À distância</span>
-        </div>
-        
-        
-        <div class="item">
-            <div>Área de atuação</div>
-            <input type="text" name="services"placeholder="Separe os serviços prestados por vírgula">
-        </div>
-        <button type="submit">Salvar</button>
+            <input type="date" name="birth" value="{{ instructor.birth }}"></div>
+            <div class="item">
+                <div>Sexo</div>
+                <span>
+                    <input type="radio" name="gender" value="M" {% if instructor.gender =='M' %} checked {% endif %}>Masculino</span>
+                    <span>
+                        <input type="radio" name="gender" value="F" {% if instructor.gender =='F' %} checked {% endif %}>Feminino</span>
+                    </div>
+                    <div class="item">
+                        <div>Tipo de Aula</div>
+                        <span>
+                            <input type="radio" name="type_class" value="P" {% if instructor.type_class =='P' %} checked {% endif %}>Presencial
+                            </span>
+                            <span>
+                                <input type="radio" name="type_class" value="D" {% if instructor.type_class =='D' %} checked {% endif %}>
+                                    À distância</span>
+                            </div>
+                            <div class="item">
+                                <div>Área de atuação</div>
+                                <input type="text" name="services" placeholder="Separe os serviços prestados por vírgula" value="{{ instructor.services }}"></div>
+                                <button type="submit">Salvar</button>

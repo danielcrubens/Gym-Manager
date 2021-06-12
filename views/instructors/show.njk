@@ -24,12 +24,14 @@
             <div>Acompanhamento</div>
             {% for service in instructor.services %}
          <span>{{service}}</span>
-            {% endfor%}}
+            {% endfor%}
         </div>
         <div class="item">
             <div>Desde</div>
             <div>{{instructor.created_at}}</div>
         </div>
+        
+        <a href="#" class="button">Editar</a>
 
     </section>
 </div>
