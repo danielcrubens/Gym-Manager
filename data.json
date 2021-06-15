@@ -1,14 +1,14 @@
 {
   "instructors": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url": "https://source.unsplash.com/collection/3465564/900x900",
-      "name": "Carlos",
-      "birth": 923184000000,
-      "gender": "M",
-      "services": "yoga, pilastes",
+      "name": "Carlos Abreu",
+      "birth": 607651200000,
+      "gender": "F",
+      "services": "yoga",
       "created_at": 1622403319691,
-      "type_class": "P"
+      "type_class": "D"
     },
     {
       "id": 2,
