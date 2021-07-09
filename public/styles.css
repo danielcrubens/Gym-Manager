@@ -151,3 +151,7 @@ a.button:hover{
   color: var(--green);
   font-weight: 500;
 }
+#form-delete button[type="submit"]{
+margin-top: 8px;
+background-color:#c73333;
+} 

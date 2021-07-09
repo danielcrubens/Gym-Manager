@@ -9,16 +9,6 @@
       "services": "yoga",
       "created_at": 1622403319691,
       "type_class": "D"
-    },
-    {
-      "id": "2",
-      "avatar_url": "https://source.unsplash.com/collection/3465564/900x900",
-      "name": "Ana Dias",
-      "birth": 736473600000,
-      "gender": "F",
-      "services": "musculação, yoga",
-      "created_at": 1622406414719,
-      "type_class": "P"
     }
   ]
 }
