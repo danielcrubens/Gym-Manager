@@ -1,7 +1,6 @@
 const fs = require("fs");
-/* const { url } = require("inspector"); */
-const data = require("./data.json");
-const { age, date } = require("./utils");
+const data = require("../data.json");
+const { age, date } = require("../utils");
 
 exports.index = function (req, res) {
   return res.render("instructors/index",{instructors: data.instructors});
@@ -26,6 +25,9 @@ exports.show = function (req, res) {
 
   return res.render("instructors/show", { instructor });
 };
+exports.create =function (req, res) {
+  return res.render("instructors/create");
+}
 //create
 exports.post = function (req, res) {
   //estrutura de validação{
@@ -102,7 +104,6 @@ exports.put = function (req, res) {
     return res.redirect(`/instructors/${id}`);
   });
 };
-
 //delete
 exports.delete = function (req, res) {
   const { id } = req.body;
