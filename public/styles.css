@@ -37,6 +37,7 @@ header {
 .links a.active {
   color: var(--purple);
   font-weight: 600;
+ 
 }
 .links a:hover {
   color: var(--purple);
@@ -194,7 +195,7 @@ tbody tr td:first-child span {
   box-shadow: 3px 1px 6px -4px #000;
   border: 2px solid #fff;
 }
-tbody tr td:last-child a {
+tbody tr td:last-child a, .table-container >a {
   background-color: var(--purple);
   padding: 8px 16px;
   text-decoration: none;
@@ -203,6 +204,10 @@ tbody tr td:last-child a {
   font-size: 12px;
   border-radius: 4px;
   transition: filter 0.2s;
+}
+.table-container >a{
+  margin-bottom: 32px;
+  display: inline-block;
 }
 tbody tr td:last-child a:hover {
   filter: brightness(1.3);

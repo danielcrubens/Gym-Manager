@@ -1,6 +1,6 @@
 const fs = require("fs");
 const data = require("../data.json");
-const { age, date } = require("../utils");
+const {  date } = require("../utils");
 
 exports.index = function (req, res) {
   return res.render("members/index", { members: data.members });
@@ -15,7 +15,7 @@ exports.show = function (req, res) {
 
   const member = {
     ...foundMember,
-    age: age(foundMember.birth),
+    birth: date(foundMember.birth).birthDay,
   };
 
   return res.render("members/show", { member });
@@ -23,7 +23,7 @@ exports.show = function (req, res) {
 
 exports.create = function (req, res) {
   return res.render("members/create");
-}
+};
 exports.post = function (req, res) {
   //estrutura de validação{
   const keys = Object.keys(req.body);
@@ -33,29 +33,26 @@ exports.post = function (req, res) {
       return res.send("Preencha todos os campos!");
     }
   }
-  let { avatar_url, birth, name, services, gender, type_class } = req.body;
 
   //tratamento dos dados
-  birth = Date.parse(birth);
-  const created_at = Date.now();
-  const id = Number(data.members.length + 1);
+  birth = Date.parse(req.body.birth);
+  let id = 1;
+  const lastMember = data.members[data.members.length - 1];
+  if (lastMember) {
+    id = lastMember.id + 1;
+  }
 
   data.members.push({
     id,
-    avatar_url,
-    name,
+    weight ,
+    ...req.body,
     birth,
-    gender,
-    services,
-    created_at,
-    type_class,
   });
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send("write file error!");
     return res.redirect("/members");
   });
-  //return res.send(req.body)
 };
 
 exports.edit = function (req, res) {
