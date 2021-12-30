@@ -1,6 +1,6 @@
 {% extends "layout.njk" %}
 {% block content %}
-    <div class="card table-container">
+    <div id="members" class="card table-container">
          <div class="header">
             <a class="button" href="/members/create">Novo</a>
             <form action="/members" method="GET">
@@ -26,7 +26,7 @@
                             <span style="background-image:url({{ member.avatar_url }})"></span>
                             {{ member.name }}
                         </td>
-                        <td>{{ member.email }}</td>
+                        <td id="member">{{ member.email }}</td>
                         <td>{{ member.weight }}Kg</td>
                         <td>{{ member.height }}cm</td>
                         <td>

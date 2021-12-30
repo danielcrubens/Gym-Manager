@@ -239,9 +239,8 @@ td:last-child {
   padding: 8px;
   box-sizing: border-box;
 }
-form input:focus[name="filter"]{
+form input:focus[name="filter"] {
   border-color: var(--green);
-
 }
 .table-container form button {
   margin: 0;
@@ -260,7 +259,8 @@ form input:focus[name="filter"]{
   align-self: end;
   justify-self: center;
 }
-.pagination a, .pagination span{
+.pagination a,
+.pagination span {
   margin: 0;
   align-self: start;
   color: var(--purple);
@@ -268,8 +268,50 @@ form input:focus[name="filter"]{
 
   padding: 0 12px;
 }
-.pagination a:hover{
+.pagination a:hover {
   filter: brightness(0.9);
   border-bottom: 1px solid var(--purple);
   background: #f3f1f1;
+}
+.peso {
+  background: #000;
+}
+/* RESPONSIVE */
+@media (max-width: 899px) {
+  body {
+    overflow-x: hidden;
+  }
+  #instructors.table-container thead tr th:nth-child(3n),td:nth-child(3n) {
+    display: none;
+  }
+
+  #members.table-container thead tr th:nth-child(2n){
+    display: none;
+  }
+  #member{
+    display: none;
+  }
+
+  .table-container {
+    display: grid;
+    grid-template: 6px 1fr 6px /1fr;
+    width: 100%;
+    padding: 20px;
+  }
+  .table-container .header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .table-container {
+    grid-template: initial;
+  }
+  tbody tr td:first-child {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    grid-template-columns: 100%;
+    width: 100%;
+  }
 }
